@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+
+/*import ttf font*/
+@font-face {
+    font-family: 'Libre Baskerville Cyrillic';
+    src: url(../fonts/BACI____.ttf);
+}
+.content{
+    width: 50%;
+    height: 100%;
+    background-color: #efe5d5;
+    color: #1a1c1a;
+    padding: 10px 40px;
+    margin: auto;
+    overflow: auto;
+    line-height: 2em;
+    font-size: 1.1em;
+    font-family: "Libre Baskerville", serif;
+}
+.ukr{
+    font-size: 1.2em;
+    font-family: 'Libre Baskerville Cyrillic'!important;
+}
+.banner{
+    width:100%;
+    height:30vh;
+    display: flex;
+    align-items: flex-end;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner h1{
+    position: absolute;
+    font-size: 3em;
+    color: #1a1c1a;
+    margin-left: 100px;
+}
