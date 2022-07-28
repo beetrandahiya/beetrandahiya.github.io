@@ -56,3 +56,22 @@
     font-family: 'Inter', sans-serif;
     margin-left: 20%;
 }
+
+pre{
+    font-size: 1em;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+.poem{
+    width: 45%;
+    color:#fff;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transform: translateY(-15%);
+}
+.banner-poem{
+    height:60vh;
+}
