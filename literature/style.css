@@ -75,3 +75,38 @@ pre{
 .banner-poem{
     height:60vh;
 }
+
+.short-poetry{
+    width: fit-content;
+    height: 100%;
+    background-color: #efe5d5;
+    color: #1a1c1a;
+    padding: 2em 3em;
+    border-radius: 10px;
+    margin: 1em;
+    line-height: 2em;
+    font-size: 1.1em;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+.short-poetry-container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #1a1c1a;
+        color: #efe5d5;
+    }
+    .end{
+        color: #efe5d5;
+    }
+  }
