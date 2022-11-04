@@ -27,6 +27,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+}
+body:hover > #cursor{
+    opacity: 1;
 }
 .cursor-dark{
     background: rgba( 0, 0, 0, 0.25 )!important;
@@ -479,7 +483,7 @@ height: 60%;
     transition: all 0.3s ease-out;
 }
 .literature-card:hover img{
-    filter: blur(3px);
+    filter: brightness(0.3);
 }
 
 .literature-card h1{
