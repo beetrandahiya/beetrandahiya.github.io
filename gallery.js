@@ -39,12 +39,10 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 }
 
 /*tablinks*/
+
 function openTab(evt, tabName) {
     var tab_open = document.getElementById(tabName);
     var tablinks = document.getElementsByClassName("tablinks");
-
-
-
     /*turn all other tabs off*/
     var tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -63,4 +61,23 @@ function openTab(evt, tabName) {
         }
         evt.currentTarget.classList.add("active");
     }
+    /* add animation to image gallery to disappear and reappear*/
+    if (tabName == "photography" ){
+        var gallery = document.getElementsByClassName("img-gallery")[0];
+        gallery.classList.add("img-gallery-animation-1");
+        setTimeout(function () {
+            gallery.classList.remove("img-gallery-animation-1");
+        }, 1000);
+    }
+    else if (tabName == "drawing"){
+        var gallery = document.getElementsByClassName("img-gallery")[1];
+        gallery.classList.add("img-gallery-animation-2");
+        setTimeout(function () {
+            gallery.classList.remove("img-gallery-animation-2");
+        }, 1000);
+    }
+
 }
+
+/* set default tab to photography*/
+document.getElementsByClassName("tablinks")[0].click();

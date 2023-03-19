@@ -130,6 +130,37 @@ body {
     width: 60%;
     margin: 0 auto;
 }
+.img-gallery-animation-1 {
+    animation: gallery-1 0.5s ease-in-out;
+}
+
+@keyframes gallery-1 {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.img-gallery-animation-2 {
+    animation: gallery-2 0.5s ease-in-out;
+}
+
+@keyframes gallery-2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
 /*make all images square and fill the square*/
 .img-gallery img {
@@ -137,6 +168,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .tabs {
@@ -148,9 +180,9 @@ body {
     justify-content: center;
     text-align: center;
     color: hsl(0 0% 11%);
-    padding: 6px 12px;
+    padding: 6px;
     outline: 0px;
-    margin: 0 auto;
+    margin: 0 auto 2% auto;
     width: 20%;
     /* subtle glass effect */
     background: rgba(255, 255, 255, 0.01);
@@ -160,16 +192,6 @@ body {
     border: 1px solid rgba(1,1,1, 0.18);
     border-radius: 100px;
 }
-.tabs-dark{
-
-     /* subtle glass effect */
-     background: rgba(255, 255, 255, 0.01);
-     backdrop-filter: blur(4px);
-     -webkit-backdrop-filter: blur(4px);
-     border: 1px solid rgba(255, 255, 255, 0.18);
-     border-radius: 100px;
-}
-
 .tablinks {
     background-color: transparent;
     border: none;
@@ -181,16 +203,10 @@ body {
     color: hsl(0 0% 51%);
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    border-radius: 100px;
 }
 .tablinks:hover {
     color: #111;
-
-}
-.tablinks-dark {
-    color: hsl(0 0% 62.8%);
-}
-.tablinks-dark:hover {
-    color: #fff;
 }
 .active {
     color: #111;
@@ -201,6 +217,22 @@ body {
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(1,1,1, 0.08);
     border-radius: 100px;
+}
+
+
+.tabs-dark{
+    /* subtle glass effect */
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 100px;
+}
+.tablinks-dark {
+    color: hsl(0 0% 62.8%);
+}
+.tablinks-dark:hover {
+    color: #fff;
 }
 .active-dark{
     color: #fff;
