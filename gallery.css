@@ -258,3 +258,57 @@ h1{
 }
 
 
+
+
+/* big image */
+#big-img {
+    /*center image on body*/
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    /*animation*/
+    transition: all 0.5s ease;
+    border-radius: 18px;
+    /* subtle glass effect */
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 1px 5px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(1,1,1, 0.18);
+    font-size:0;
+}
+
+#big-img img{
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    color: hsl(0 0% 51%);
+    transition: all 0.3s ease;
+    margin: 14px;
+}
+
+i:active{
+    animation: close 0.3s ease;
+}
+@keyframes close {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}

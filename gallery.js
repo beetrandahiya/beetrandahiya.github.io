@@ -81,3 +81,24 @@ function openTab(evt, tabName) {
 
 /* set default tab to photography*/
 document.getElementsByClassName("tablinks")[0].click();
+
+/*click on image to put it to big-img*/
+var img = document.getElementsByTagName("img");
+var big_img = document.getElementById("big-img");
+
+for (i = 0; i < img.length; i++) {
+    img[i].addEventListener("click", function () {
+        big_img.getElementsByTagName("img")[0].src = this.src;
+        big_img.style.display = "block";
+    });
+}
+
+/*close big-img if clicked outside big-img*/
+window.addEventListener("click", function (e) {
+    console.log(e.target);
+    /* close big-img if clicked outside big-img or img inside big-img*/
+    if(big_img.style.display == "block" && e.target==body || e.target==tabs || e.target==tablinks[0] || e.target==tablinks[1] || e.target == big_img.getElementsByTagName("i")[0] || e.target == this.document.getElementsByTagName("h1")[0]){
+        big_img.style.display = "none";
+        console.log("close");
+    }
+});
