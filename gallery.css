@@ -1,6 +1,14 @@
 /*import inter font*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
+/* load magnat font */
+@font-face {
+    font-family: 'MagnatPoster';
+    src: url('fonts/MagnatPoster-Regular.otf');
+}
+@font-face {
+    font-family: 'MagnatPoster Bold';
+    src: url('fonts/MagnatPoster-Bold.otf');
+}
 html {
     scroll-behavior: smooth;
 }
@@ -120,7 +128,12 @@ body {
 
 
 /* gallery */
-
+h1{
+    font-size: 4rem;
+    font-family: 'MagnatPoster Bold', sans-serif;
+    text-align: left;
+    margin: 0 10%;
+}
 .img-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
