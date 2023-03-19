@@ -81,7 +81,6 @@ body{
     animation: gradient-ball 1s infinite;
     cursor: none;
     transition: all 0.5s;
-   
 }
 .body-dark{
     background: #111;

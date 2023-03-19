@@ -1,21 +1,197 @@
-/* gallery app with two tabs */
-/* gallery with 3 photos in a row  and app width 60% with all images square*/
+/*import inter font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* cursor */
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 6px 0 rgba(231, 138, 235, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: width 0.3s, height 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+body:hover>#cursor {
+    opacity: 1;
+}
+
+.cursor-dark {
+    background: rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 1px 6px 0 rgba(31, 38, 135, 0.27) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+#cursor-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #222;
+    transition: opacity 0.3s;
+}
+
+.cursor-dot-dark {
+    background: #fff !important;
+}
+
+/*body*/
+
+body {
+    background: #fff0;
+    background-attachment: fixed;
+    animation: gradient-ball 1s infinite;
+    cursor: none;
+    transition: all 0.5s;
+    font-family: 'Inter', sans-serif;
+}
+
+.body-dark {
+    background: #111;
+    color: #fff;
+    z-index: 1;
+}
+
+#bg-ball1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(31.57% 51.57% at 65% 50%, #f9b3f8 0%, rgba(255, 255, 255, 0) 70%);
+    animation: ball-1 5s infinite;
+    transform-origin: 50% 50%;
+    z-index: -6;
+}
+
+.bg-ball1-dark {
+    background-image: radial-gradient(31.57% 51.57% at 65% 50%, #5d025d6a 0%, #1110 80%) !important;
+}
+
+.bg-ball2-dark {
+    background-image: radial-gradient(31.57% 51.57% at 60% 55%, #00345f49 0%, #1110 80%) !important;
+}
+
+#bg-ball2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(31.57% 51.57% at 60% 55%, #6fbeff88 0%, rgba(255, 255, 255, 0) 70%);
+    animation: ball-2 5s infinite;
+    transform-origin: 50% 50%;
+    z-index: -6;
+}
+
+
+@keyframes ball-1 {
+    0% {
+        transform: rotate(0deg) translateX(5%) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(5%) rotate(-360deg);
+    }
+}
+
+@keyframes ball-2 {
+    0% {
+        transform: rotate(360deg) translateX(5%) rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(5%) rotate(0deg);
+    }
+}
+
+
+/* gallery */
 
 .img-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  grid-template-areas: "a a a" "b b b" "c c c";
-  width: 60%;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "a a a""b b b""c c c";
+    width: 60%;
+    margin: 0 auto;
 }
 
 /*make all images square and fill the square*/
 .img-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 2px solid #000;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 20%;
+    /* subtle glass effect */
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 100px;
+}
+
+.tablinks {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: none;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+
+}
+
+.active {
+    color: #fff;
+    background-color: hsl(0 0% 100% / 0.056);
+    /*glass glow effect*/
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 100px;
+}
+
+.tablinks-dark {
+    color: #fff;
+}
+
+
+.tabs {
+    font-size: 15px;
+    border-radius: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: hsl(0 0% 11%);
+    padding: 6px 12px;
+
+    outline: 0px;
+    cursor: pointer;
+    transition: color 150ms ease 0s, text-shadow 250ms ease 0s;
+}
+
+.tablinks {}
