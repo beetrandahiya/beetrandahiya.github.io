@@ -140,16 +140,34 @@ body {
 }
 
 .tabs {
+    font-size: 15px;
+    border-radius: 500px;
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    color: hsl(0 0% 11%);
+    padding: 6px 12px;
+    outline: 0px;
     margin: 0 auto;
     width: 20%;
     /* subtle glass effect */
     background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 1px 5px 0 rgba(31, 38, 135, 0.07);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(1,1,1, 0.18);
     border-radius: 100px;
+}
+.tabs-dark{
+
+     /* subtle glass effect */
+     background: rgba(255, 255, 255, 0.01);
+     backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     border: 1px solid rgba(255, 255, 255, 0.18);
+     border-radius: 100px;
 }
 
 .tablinks {
@@ -160,10 +178,31 @@ body {
     padding: 14px 16px;
     font-size: 17px;
     width: 50%;
+    color: hsl(0 0% 51%);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.tablinks:hover {
+    color: #111;
 
 }
-
+.tablinks-dark {
+    color: hsl(0 0% 62.8%);
+}
+.tablinks-dark:hover {
+    color: #fff;
+}
 .active {
+    color: #111;
+    background-color: hsl(0 0% 20% / 0.06);
+    /*glass glow effect*/
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(1,1,1, 0.08);
+    border-radius: 100px;
+}
+.active-dark{
     color: #fff;
     background-color: hsl(0 0% 100% / 0.056);
     /*glass glow effect*/
@@ -173,25 +212,4 @@ body {
     border-radius: 100px;
 }
 
-.tablinks-dark {
-    color: #fff;
-}
 
-
-.tabs {
-    font-size: 15px;
-    border-radius: 500px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: hsl(0 0% 11%);
-    padding: 6px 12px;
-
-    outline: 0px;
-    cursor: pointer;
-    transition: color 150ms ease 0s, text-shadow 250ms ease 0s;
-}
-
-.tablinks {}
