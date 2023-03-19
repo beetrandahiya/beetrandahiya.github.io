@@ -1,7 +1,8 @@
 
 // add navbar tab functionality
 navitems=document.getElementsByClassName("nav-item");
-for(i=0;i<navitems.length;i++){
+for(i=0;i<navitems.length-2;i++){
+    console.log(navitems[i]);
     navitems[i].addEventListener("click",function(){
         for(j=0;j<navitems.length;j++){
             //set all other desktop to display none
