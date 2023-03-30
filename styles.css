@@ -76,7 +76,7 @@ h1:hover #cursor{
 
 
 body{
-    background: #fff0;
+    background: #f4e6f9;
     background-attachment: fixed;
     animation: gradient-ball 1s infinite;
     cursor: none;
@@ -233,25 +233,19 @@ a{
     text-align: left;
     margin-top: 240px;
 }
+.home-dark{
+    color:#fff;
+}
 #home h1::selection{
     background: #222;
     color: #fff;
 }
-.home-dark{
-    color:#fff;
-}
+
 .home-dark h1{
     color: #fff !important;
 }
 .home-dark h1::selection{
     background: #fff !important;
-    color: #111 !important;
-}
-.home-dark p{
-    color:#fffb !important;
-}
-.home-dark p::selection{
-    background: #fffb !important;
     color: #111 !important;
 }
 #home p{
@@ -267,6 +261,15 @@ a{
     background: #333;
     color: #fff;
 }
+.home-dark p{
+    color:#fffb !important;
+}
+
+.home-dark p::selection{
+    background: #fffb !important;
+    color: #111 !important;
+}
+
 #home hr{
     width: 20%;
     border: none;
@@ -279,11 +282,12 @@ a{
 
 /* Projects */
 
-#projects{
+#projects, #literature, #hobbies{
     width: 80%;
     margin:auto;
+    margin-bottom: 200px;
 }
-#project-cards, #literature,#hobbies,#WIPs{
+#project-cards{
     width: 100%;
     margin:auto;
     text-align: left;
@@ -299,6 +303,24 @@ a{
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+#literature-cards{
+    width: 100%;
+    margin:auto;
+    text-align: left;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    /* make the grid responsive and maximun 2 cards per row */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 .content-header{
     width: 100%;
@@ -392,17 +414,8 @@ a{
     font-weight: 700;
     margin: 0;
 }
-.project-card-title-dark h1{
+.project-card-dark h1{
     color: #fff !important;
-}
-.project-card-title-dark h1::selection{
-    background: #fff !important;
-    color: #111 !important;
-}
-
-.project-card-title h1::selection{
-    background: #222;
-    color: #fff;
 }
 .project-card-description{
     height: 20%;
@@ -422,18 +435,9 @@ a{
     text-align: left;
     margin:0.5em 0;
 }
-.project-card-description p::selection{
-    background: #333;
-    color: #fff;
-}
-.project-card-description-dark p{
+.project-card-dark p{
     color: #fffb !important;
 }
-.project-card-description-dark p::selection{
-    background: #fffb !important;
-    color: #111 !important;
-}
-
 
 .project-card:hover .project-card-title{
     font-size: 1.7em;
@@ -453,16 +457,17 @@ height: 60%;
 /* literature */
 
 .literature-card{
-    width: 44%;
+    width: 90%;
     height: 10em;
-    margin: 20px;
+    margin: 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
     border-radius: 16px;
-    padding: 10px;
+    padding: 4px;
+    
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 2px 12px 0 rgba( 231, 138, 235, 0.4 );
+    box-shadow: 0 2px 12px 0 rgba( 231, 138, 235, 0.1 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -474,16 +479,8 @@ height: 60%;
     box-shadow: 0 2px 6px 0 rgba(31, 38, 135, 0.1 );
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.literature-card-image{
-    height:100%;
-    width: 100%;
-    margin:none;
-    padding:none;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: all 0.2s ease-out;
-}
-.literature-card-image img{
+
+.literature-card-img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -502,10 +499,6 @@ height: 60%;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #fff;
-}
-.literature-card h1::selection{
-    background: #fff;
-    color: #222;
 }
 
 /* hobbies */
@@ -614,6 +607,11 @@ height: 60%;
     #literature{
         width: 90vw;
         margin: 0 auto;
+    }
+    #literature-cards{
+        width: 90vw;
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
     }
     .literature-card{
         width: 90vw;

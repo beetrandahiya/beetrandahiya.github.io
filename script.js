@@ -226,3 +226,50 @@ projects.forEach(function (project, index) {
     project_cards.appendChild(project_card);
 });
 
+
+
+//adding literature cards
+var literature_cards=document.getElementById("literature-cards");
+
+/* Literature data */
+var literature = [
+    {
+        title: "Outside the Window",
+        cardImage: "./images/outsidethewindow.webp",
+        link: "./literature/outside_the_window.html"
+    },
+    {
+        title: "Wanderer",
+        cardImage: "./images/DALL·E 2022-06-17 15.28.27 - a man standing at the edge of cliff in starry night.webp",
+        link: "./literature/Wanderer.html"
+    },
+    {
+        title: "Short Poetry",
+        cardImage: "./images/DALL·E 2022-06-24 20.18.51 - a modern writer's desk, dark.webp",
+        link: "./literature/short_poetry.html"
+    },
+    {
+        title: "First Day of Hostel",
+        cardImage: "./images/hostel_in_india.webp",
+        link: "./literature/first_day_of_hostel.html"
+    }
+];
+
+literature.forEach(function (literature, index) {
+    var literature_card = document.createElement("div");
+    literature_card.classList.add("literature-card");
+    literature_card.style.animationDelay = "0." + index + "s";
+    var literature_card_img = document.createElement("img");
+    literature_card_img.classList.add("literature-card-img");
+    literature_card_img.src = literature.cardImage;
+    literature_card_img.alt = literature.title;
+    var literature_card_title = document.createElement("h1");
+    literature_card_title.classList.add("literature-card-title");
+    literature_card_title.innerHTML = literature.title;
+    
+
+    literature_card.appendChild(literature_card_img);
+    literature_card.appendChild(literature_card_title);
+    literature_cards.appendChild(literature_card);
+});
+
