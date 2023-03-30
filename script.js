@@ -48,117 +48,6 @@ navbar.addEventListener("mouseout",function(){
 var dark_state=false;
 
 
-//dark mode body
-var body=document.getElementsByTagName("body")[0];
-var darkmode=document.getElementById("darkmode");
-var darkmode_img=document.getElementById("darkmode-img");
-var bg_ball1=document.getElementById("bg-ball1");
-var bg_ball2=document.getElementById("bg-ball2");
-var cursor_dot=document.getElementById("cursor-dot");
-var content_header=document.getElementsByClassName("content-header");
-var project_card=document.getElementsByClassName("project-card");
-var project_card_title=document.getElementsByClassName("project-card-title");
-var project_card_desc=document.getElementsByClassName("project-card-description");
-var literature_card=document.getElementsByClassName("literature-card");
-var hobbies_card=document.getElementsByClassName("hobbies-card");
-//initial dark mode if dark mode is enabled in browser
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // dark mode 
-    body.classList.add("body-dark");
-    navbar.classList.add("navbar-dark");
-    home.classList.add("home-dark");
-    bg_ball1.classList.add("bg-ball1-dark");
-    bg_ball2.classList.add("bg-ball2-dark");
-    cursor.classList.add("cursor-dark");
-    cursor_dot.classList.add("cursor-dot-dark");
-    for(i=0;i<content_header.length;i++){
-        content_header[i].classList.add("content-header-dark");
-    }
-    for(i=0;i<project_card.length;i++){
-        project_card[i].classList.add("project-card-dark");
-    }
-    for(i=0;i<project_card_title.length;i++){
-        project_card_title[i].classList.add("project-card-title-dark");
-    }
-    for(i=0;i<project_card_desc.length;i++){
-        project_card_desc[i].classList.add("project-card-description-dark");
-    }
-    for(i=0;i<literature_card.length;i++){
-        literature_card[i].classList.add("literature-card-dark");
-    }
-    for(i=0;i<hobbies_card.length;i++){
-        hobbies_card[i].classList.add("hobbies-card-dark");
-    }
-    //dark mode image change
-    darkmode_img.src="icons/icons8-summer-96 (1).png";
-    dark_state=true;
-  
-}
-darkmode.addEventListener("click",function(){
-    if(dark_state){
-        body.classList.remove("body-dark");
-        navbar.classList.remove("navbar-dark");
-        home.classList.remove("home-dark");
-        bg_ball1.classList.remove("bg-ball1-dark");
-        bg_ball2.classList.remove("bg-ball2-dark");
-        cursor.classList.remove("cursor-dark");
-        cursor_dot.classList.remove("cursor-dot-dark");
-        for(i=0;i<content_header.length;i++){
-            content_header[i].classList.remove("content-header-dark");
-        }
-        for(i=0;i<project_card.length;i++){
-            project_card[i].classList.remove("project-card-dark");
-        }
-        for(i=0;i<project_card_title.length;i++){
-            project_card_title[i].classList.remove("project-card-title-dark");
-        }
-        for(i=0;i<project_card_desc.length;i++){
-            project_card_desc[i].classList.remove("project-card-description-dark");
-        }
-        for(i=0;i<literature_card.length;i++){
-            literature_card[i].classList.remove("literature-card-dark");
-        }
-        for(i=0;i<hobbies_card.length;i++){
-            hobbies_card[i].classList.remove("hobbies-card-dark");
-        }
-        //dark mode image change
-        darkmode_img.src="icons/icons8-moon-and-stars-96 (1).png";
-        dark_state=false;
-    }
-    else{
-        body.classList.add("body-dark");
-        navbar.classList.add("navbar-dark");
-        home.classList.add("home-dark");
-        bg_ball1.classList.add("bg-ball1-dark");
-        bg_ball2.classList.add("bg-ball2-dark");
-        cursor.classList.add("cursor-dark");
-        cursor_dot.classList.add("cursor-dot-dark");
-        for(i=0;i<content_header.length;i++){
-            content_header[i].classList.add("content-header-dark");
-        }
-        for(i=0;i<project_card.length;i++){
-            project_card[i].classList.add("project-card-dark");
-        }
-        for(i=0;i<project_card_title.length;i++){
-            project_card_title[i].classList.add("project-card-title-dark");
-        }
-        for(i=0;i<project_card_desc.length;i++){
-            project_card_desc[i].classList.add("project-card-description-dark");
-        }
-        for(i=0;i<literature_card.length;i++){
-            literature_card[i].classList.add("literature-card-dark");
-        }
-        for(i=0;i<hobbies_card.length;i++){
-            hobbies_card[i].classList.add("hobbies-card-dark");
-        }
-        //dark mode image change
-        darkmode_img.src="icons/icons8-summer-96 (1).png";
-        dark_state=true;
-    }
-});
-
-
-
 //adding project cards
 var project_cards=document.getElementById("project-cards");
 
@@ -271,5 +160,118 @@ literature.forEach(function (literature, index) {
     literature_card.appendChild(literature_card_img);
     literature_card.appendChild(literature_card_title);
     literature_cards.appendChild(literature_card);
+});
+
+
+
+
+
+//dark mode body
+var body=document.getElementsByTagName("body")[0];
+var darkmode=document.getElementById("darkmode");
+var darkmode_img=document.getElementById("darkmode-img");
+var bg_ball1=document.getElementById("bg-ball1");
+var bg_ball2=document.getElementById("bg-ball2");
+var cursor_dot=document.getElementById("cursor-dot");
+var content_header=document.getElementsByClassName("content-header");
+var project_card=document.getElementsByClassName("project-card");
+var project_card_title=document.getElementsByClassName("project-card-title");
+var project_card_desc=document.getElementsByClassName("project-card-description");
+var literature_card=document.getElementsByClassName("literature-card");
+var hobbies_card=document.getElementsByClassName("hobbies-card");
+//initial dark mode if dark mode is enabled in browser
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // dark mode 
+    body.classList.add("body-dark");
+    navbar.classList.add("navbar-dark");
+    home.classList.add("home-dark");
+    bg_ball1.classList.add("bg-ball1-dark");
+    bg_ball2.classList.add("bg-ball2-dark");
+    cursor.classList.add("cursor-dark");
+    cursor_dot.classList.add("cursor-dot-dark");
+    for(i=0;i<content_header.length;i++){
+        content_header[i].classList.add("content-header-dark");
+    }
+    for(i=0;i<project_card.length;i++){
+        project_card[i].classList.add("project-card-dark");
+    }
+    for(i=0;i<project_card_title.length;i++){
+        project_card_title[i].classList.add("project-card-title-dark");
+    }
+    for(i=0;i<project_card_desc.length;i++){
+        project_card_desc[i].classList.add("project-card-description-dark");
+    }
+    for(i=0;i<literature_card.length;i++){
+        literature_card[i].classList.add("literature-card-dark");
+    }
+    for(i=0;i<hobbies_card.length;i++){
+        hobbies_card[i].classList.add("hobbies-card-dark");
+    }
+    //dark mode image change
+    darkmode_img.src="icons/icons8-summer-96 (1).png";
+    dark_state=true;
+  
+}
+darkmode.addEventListener("click",function(){
+    if(dark_state){
+        body.classList.remove("body-dark");
+        navbar.classList.remove("navbar-dark");
+        home.classList.remove("home-dark");
+        bg_ball1.classList.remove("bg-ball1-dark");
+        bg_ball2.classList.remove("bg-ball2-dark");
+        cursor.classList.remove("cursor-dark");
+        cursor_dot.classList.remove("cursor-dot-dark");
+        for(i=0;i<content_header.length;i++){
+            content_header[i].classList.remove("content-header-dark");
+        }
+        for(i=0;i<project_card.length;i++){
+            project_card[i].classList.remove("project-card-dark");
+        }
+        for(i=0;i<project_card_title.length;i++){
+            project_card_title[i].classList.remove("project-card-title-dark");
+        }
+        for(i=0;i<project_card_desc.length;i++){
+            project_card_desc[i].classList.remove("project-card-description-dark");
+        }
+        for(i=0;i<literature_card.length;i++){
+            literature_card[i].classList.remove("literature-card-dark");
+        }
+        for(i=0;i<hobbies_card.length;i++){
+            hobbies_card[i].classList.remove("hobbies-card-dark");
+        }
+        //dark mode image change
+        darkmode_img.src="icons/icons8-moon-and-stars-96 (1).png";
+        dark_state=false;
+    }
+    else{
+        body.classList.add("body-dark");
+        navbar.classList.add("navbar-dark");
+        home.classList.add("home-dark");
+        bg_ball1.classList.add("bg-ball1-dark");
+        bg_ball2.classList.add("bg-ball2-dark");
+        cursor.classList.add("cursor-dark");
+        cursor_dot.classList.add("cursor-dot-dark");
+        for(i=0;i<content_header.length;i++){
+            content_header[i].classList.add("content-header-dark");
+        }
+        for(i=0;i<project_card.length;i++){
+            project_card[i].classList.add("project-card-dark");
+        }
+        for(i=0;i<project_card_title.length;i++){
+            project_card_title[i].classList.add("project-card-title-dark");
+        }
+        for(i=0;i<project_card_desc.length;i++){
+            project_card_desc[i].classList.add("project-card-description-dark");
+        }
+        for(i=0;i<literature_card.length;i++){
+            literature_card[i].classList.add("literature-card-dark");
+        }
+        for(i=0;i<hobbies_card.length;i++){
+            hobbies_card[i].classList.add("hobbies-card-dark");
+        }
+        //dark mode image change
+        darkmode_img.src="icons/icons8-summer-96 (1).png";
+        dark_state=true;
+    }
 });
 
