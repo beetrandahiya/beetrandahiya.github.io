@@ -156,3 +156,73 @@ darkmode.addEventListener("click",function(){
         dark_state=true;
     }
 });
+
+
+
+//adding project cards
+var project_cards=document.getElementById("project-cards");
+
+/* Projects data */
+var projects = [
+    {
+        title: "ChelseaJS",
+        cardImage: "./images/ChelseaJS_banner.webp",
+        description: "A JavaScript library for building amazing SVG illustrations and animations.",
+        Preview: "https://prakrisht.me/ChelseaJS-docs/",
+    },
+    {
+        title: "Sidus",
+        cardImage: "./images/Main Light (5).webp",
+        description: "A Simple, Intuitive and Fast Maths Plotter.",
+        Preview: "https://prakrisht.me/Sidus/",
+    },
+    {
+        title: "Periodica",
+        cardImage: "./images/Periodica_banner.webp",
+        description: "A Beautiful Periodic Table of Elements.",
+        Preview: "https://periodic-table-navy.vercel.app/",
+    },
+    {
+        title: "Project-G",
+        cardImage: "./images/project G (1).webp",
+        description: "SVG Graphing library that will make you and your audience fall in love with your visuals.",
+        Preview: "https://prakrisht.me/Project-G-docs/",
+    },
+    {
+        title: "fancy-input",
+        cardImage: "./images/fancy_input_banner.png",
+        description: "fancy_input is a WIP library. Just an HTML tag to light up your webpage. Amazing input animations and customizations for your sad default input boxes",
+        Preview: "https://prakrisht.me/fancy-input/",
+    },
+    {
+        title: "Sidus Initiative",
+        cardImage: "./images/Sidus.webp",
+        description: "A Bigger Picture of the Sidus Ecosystem where we aim to make learning simpler, more intuitive, more fun, and more accessible to everyone.",
+        Preview: "https://prakrisht.me/Sidus-Home/",
+    },
+];
+
+projects.forEach(function (project, index) {
+    var project_card = document.createElement("div");
+    project_card.classList.add("project-card");
+    project_card.style.animationDelay = "0." + index + "s";
+    var project_card_img = document.createElement("img");
+    project_card_img.classList.add("project-card-img");
+    project_card_img.src = project.cardImage;
+    project_card_img.alt = project.title;
+    var project_card_title = document.createElement("h1");
+    project_card_title.classList.add("project-card-title");
+    project_card_title.innerHTML = project.title;
+    var project_card_desc = document.createElement("p");
+    project_card_desc.classList.add("project-card-description");
+    project_card_desc.innerHTML = project.description;    
+
+    project_card.appendChild(project_card_img);
+    project_card.appendChild(project_card_title);
+    project_card.appendChild(project_card_desc);
+    project_card.onclick = function () {
+        window.open(project.Preview, "_blank");
+    };
+    project_cards.appendChild(project_card);
+});
+

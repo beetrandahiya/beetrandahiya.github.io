@@ -312,3 +312,18 @@ i:active{
         transform: scale(0);
     }
 }
+
+.big-img-animation {
+    animation: big-img 0.5s ease-in-out;
+}
+@keyframes big-img {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

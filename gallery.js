@@ -7,7 +7,7 @@ document.addEventListener("mousemove", function (e) {
     y = e.clientY - cursor_width;
     cursor.style.transform = " translate3d(" + x + "px," + y + "px,0)";
 });
-
+dark_state = false;
 /*dark mode*/
 var body = document.getElementsByTagName("body")[0];
 
@@ -90,6 +90,14 @@ for (i = 0; i < img.length; i++) {
     img[i].addEventListener("click", function () {
         big_img.getElementsByTagName("img")[0].src = this.src;
         big_img.style.display = "block";
+        //add animation to big-img
+        big_img.classList.add("big-img-animation");
+        setTimeout(function () {
+            big_img.classList.remove("big-img-animation");
+        }
+
+            , 1000);
+            
     });
 }
 

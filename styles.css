@@ -279,14 +279,26 @@ a{
 
 /* Projects */
 
-#projects, #literature,#hobbies,#WIPs{
+#projects{
     width: 80%;
     margin:auto;
+}
+#project-cards, #literature,#hobbies,#WIPs{
+    width: 100%;
+    margin:auto;
     text-align: left;
-    display: flex;
-    flex-wrap: wrap;
     scroll-snap-stop: always;
     scroll-snap-align: start;
+    /* make the grid responsive */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .content-header{
     width: 100%;
@@ -335,17 +347,16 @@ a{
 }
 
 .project-card{
-    width: 26%;
     height: 20em;
-    margin: 20px;
+    margin: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 16px;
-    padding: 10px;
+    padding: 4px;
 
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 2px 12px 0 rgba( 231, 138, 235, 0.4 );
+    box-shadow: 0 2px 12px 0 rgba( 231, 138, 235, 0.1 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -357,13 +368,8 @@ a{
     box-shadow: 0 2px 6px 0 rgba(31, 38, 135, 0.1 );
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.project-card-image{
-    height:100%;
-    margin:none;
-    padding:none;
-    transition: all 0.2s ease-out;
-}
-.project-card-image img{
+
+.project-card-img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -379,8 +385,8 @@ a{
     overflow: hidden;
     transition: all 0.2s ease-out;
 }
-.project-card-title h1{
-    font-size: 1.7em;
+.project-card h1{
+    font-size: 0em;
     padding-left: 2px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -406,8 +412,8 @@ a{
     overflow: hidden;
     transition: all 0.2s ease-out;
 }
-.project-card-description p{
-    font-size: 0.9em;
+.project-card p{
+    font-size: 0em;
     font-family: 'Inter', sans-serif;
     line-height: 1em;
     font-weight: 400;
@@ -430,10 +436,12 @@ a{
 
 
 .project-card:hover .project-card-title{
+    font-size: 1.7em;
     height:20%;
     overflow: visible;
 }
 .project-card:hover .project-card-description{
+    font-size: 0.9em;
     height:20%;
     overflow: visible;
 }
