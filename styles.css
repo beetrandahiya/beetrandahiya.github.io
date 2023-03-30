@@ -76,7 +76,7 @@ h1:hover #cursor{
 
 
 body{
-    background: #f4e6f9;
+    background: #fff;
     background-attachment: fixed;
     animation: gradient-ball 1s infinite;
     cursor: none;
