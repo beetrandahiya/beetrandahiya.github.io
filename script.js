@@ -43,6 +43,11 @@ navbar.addEventListener("mouseout",function(){
 }
 );
 
+//download resume
+function downloadResume(){
+    window.open("./CV - Prakrisht_Final.pdf","_blank");
+}
+
 
 //adding dark mode
 var dark_state=false;
