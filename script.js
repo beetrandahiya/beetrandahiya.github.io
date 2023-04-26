@@ -164,6 +164,9 @@ literature.forEach(function (literature, index) {
 
     literature_card.appendChild(literature_card_img);
     literature_card.appendChild(literature_card_title);
+    literature_card.onclick = function () {
+        window.open(literature.link, "_blank");
+    };
     literature_cards.appendChild(literature_card);
 });
 
