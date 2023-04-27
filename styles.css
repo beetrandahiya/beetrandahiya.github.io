@@ -452,6 +452,33 @@ a{
 .project-card:hover .project-card-image{
 height: 60%;
 }
+h2 a{
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #222;
+    text-align: left;
+    margin-top: 0px;
+}
+h2{
+    margin: 0 5%;
+}
+
+h2::after{
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: #333;
+    /*position it next to the h2*/
+    position: relative;
+    top: -0.5em;
+    /*start it wherethe h2 ends*/
+    left: 4em;
+    /*animate it*/
+    transition: all 0.3s ease-in-out;
+
+}
 
 
 /* literature */
