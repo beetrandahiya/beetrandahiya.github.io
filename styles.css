@@ -477,7 +477,9 @@ h2::after{
     left: 4em;
     /*animate it*/
     transition: all 0.3s ease-in-out;
-
+}
+h2:hover::after{
+    width: 80%;
 }
 
 
